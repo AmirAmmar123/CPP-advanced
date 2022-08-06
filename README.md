@@ -1,2 +1,2 @@
-# C-advanced
-Will be used as a purpose of studying
+# C++-advanced
+For studying purpose
