@@ -1,0 +1,3 @@
+/cygdrive/c/Users/merom/OneDrive/Desktop/GitsRip-HelloWord/C++-advanced/cmake-build-debug/CMakeFiles/C___advanced.dir
+/cygdrive/c/Users/merom/OneDrive/Desktop/GitsRip-HelloWord/C++-advanced/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/merom/OneDrive/Desktop/GitsRip-HelloWord/C++-advanced/cmake-build-debug/CMakeFiles/rebuild_cache.dir
