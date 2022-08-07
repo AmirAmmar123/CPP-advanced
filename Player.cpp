@@ -5,7 +5,7 @@
 #include "Player.h"
 #include <cstring>
 
-Player::Player(char *pName, unsigned int pid) :
+Player::Player(char pName[], unsigned int pid) :
     id(pid),score(0)
 {
 
@@ -26,12 +26,38 @@ unsigned int Player::get_id() const {return id;}
 unsigned int Player::get_score() const {return score;}
 
 
-std::ostream &operator<<(std::ostream &os, const Player& player) {
-    os << "Name: " << player.get_name() << "\tid: " << player.get_id() << '\n';
-    return os;
-}
-
-
 Player::~Player()  {
     delete[] name;
 }
+
+void Player::setName(char *name) {
+    Player::name = name;
+}
+
+void Player::setId(unsigned int id) {
+    Player::id = id;
+}
+
+void Player::setScore(unsigned int score) {
+    Player::score = score;
+}
+
+Player &Player::operator=(const Player &rhs) {
+    if(this == &rhs){return *this;}
+    delete this->name;
+
+    this->name = new char [strlen(rhs.name)+1];
+    strcpy(this->name, rhs.name);
+
+    this->score = rhs.score;
+    this->id = rhs.id;
+
+    return *this;
+
+}
+
+std::ostream &operator<<(std::ostream &os, const Player &player) {
+    os << "name: " << player.name << " id: " << player.id << " score: " << player.score;
+    return os;
+}
+
