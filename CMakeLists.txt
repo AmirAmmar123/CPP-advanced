@@ -3,4 +3,4 @@ project(C___advanced)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C___advanced main.cpp)
+add_executable(C___advanced main.cpp Player.h Player.cpp)
