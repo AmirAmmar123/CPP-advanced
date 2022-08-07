@@ -8,7 +8,7 @@
 Player::Player(char *pName, unsigned int pid) :
     id(pid),score(0)
 {
-    total_Players++;
+
     name = new char[strlen(pName)+1];
     strcpy(name,pName);
 }
@@ -24,7 +24,7 @@ Player::Player(const Player &other):id(other.id), score(other.score)
 char *Player::get_name() const {return name;}
 unsigned int Player::get_id() const {return id;}
 unsigned int Player::get_score() const {return score;}
-unsigned int Player::get_total_Players() const {return total_Players;}
+
 
 std::ostream &operator<<(std::ostream &os, const Player& player) {
     os << "Name: " << player.get_name() << "\tid: " << player.get_id() << '\n';

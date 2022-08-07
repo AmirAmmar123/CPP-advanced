@@ -20,15 +20,11 @@ public:
     char * get_name() const;
     unsigned int get_id() const;
     unsigned int get_score() const;
-    unsigned int get_total_Players()const;
-
-
 
 private:
     char * name{};
     unsigned int id{};
     unsigned int score{};
-    static unsigned int total_Players ;
 
 };
 
