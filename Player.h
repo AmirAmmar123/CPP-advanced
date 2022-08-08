@@ -40,6 +40,8 @@ public:
 // class friends
     friend std::ostream &operator<<(std::ostream &os, const Player &player);
 
+
+
 private:
     char * name{};
     unsigned int id{};
