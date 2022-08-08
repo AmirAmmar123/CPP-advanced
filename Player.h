@@ -20,6 +20,10 @@ public:
 
 // copy constructor
     Player(const Player & other);
+// move constructor
+    Player(Player && rhs) noexcept ;
+// mvoe assignment
+    Player &operator=(Player && rhs) noexcept ;
 // copt assignment
     Player &operator=(const Player &rhs);
 // getters

@@ -61,3 +61,28 @@ std::ostream &operator<<(std::ostream &os, const Player &player) {
     return os;
 }
 
+Player::Player(Player &&rhs)  noexcept {
+    this->name = rhs.name;
+    this->id = rhs.id;
+    this->score =rhs.score;
+
+    rhs.name = nullptr;
+    rhs.score = 0;
+    rhs.id = 0;
+}
+
+Player &Player::operator=( Player && rhs) noexcept {
+    if(this == &rhs) return *this;
+
+    delete [] this->name;
+
+    this->name = rhs.name;
+    this->id = rhs.id;
+    this->score =rhs.score;
+
+    rhs.name = nullptr;
+    rhs.score = 0;
+    rhs.id = 0;
+
+    return *this;
+}
